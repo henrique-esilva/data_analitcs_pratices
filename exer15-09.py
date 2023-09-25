@@ -13,27 +13,27 @@ operations=[
 for i in operations:
     print(i)
 
-# 3 em Python, armazene seu nome em uma variável e exiba usando o comando print()]
+def escreve_nome():
+    "3 em Python, armazene seu nome em uma variável e exiba usando o comando print()"
+    meuNome=input('escreva seu nome: ')
+    print(meuNome)
 
-meuNome='Pedro Henrique'
-print(meuNome)
+def operacao_fixa():
+    "4 usando o print, exiba o resultado de 3x-10y sendo que x recebe 10 e y recebe 2"
+    x=10
+    y=2
+    print(3*x-10*y)
 
-# 4 usando o print, exiba o resultado de 3x-10y sendo que x recebe 10 e y recebe 2
-
-x=10
-y=2
-print(3*x-10*y)
-
-# 5 em Python crie uma aplicação que calcule a média aritmética de duas entradas do usuário
-
-x=input('digite um número')
-y=input('digite outro número')
-print('Sua média é %s'%((x+y)/2))
+def media_dois_numeros():
+    "5 em Python crie uma aplicação que calcule a média aritmética de duas entradas do usuário"
+    x=input('digite um número')
+    y=input('digite outro número')
+    print('Sua média é %s'%((x+y)/2))
 
 def salario_do_dia():
     "6 criar um programa que calcule quanto um usuário ganhará por dia em um mês de 30 dias"
-    sal = input('Digite seu salário')
-    print('Seu ganho diário é de %d' % sal)
+    sal = float( input('Digite seu salário') )
+    print('Seu ganho diário é de %f' % sal)
 
 def dia_da_semana():
     "7 crie uma aplicação que receba uma sigla de um dia da semana e imprima o dia por extenso"
@@ -48,7 +48,6 @@ def dia_da_semana():
     }
     response = input('Digite uma sigla de dia da semana: ').lower()
     print(semana[response])
-
 
 def testes_logicos():
     __doc__="""8 usando testes booleanos, responda com True ou False sendo que:
