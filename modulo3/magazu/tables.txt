@@ -52,6 +52,3 @@ codproduto int(11) not null
 alter table pedido add constraint
 fkproduto foreign key(codproduto)
 references produto(codproduto);
-
-insert into cliente(codcliente, nome,  telefone, endereco) values
-(null, 'Ana', 'Rua abc', '+552190000000');
