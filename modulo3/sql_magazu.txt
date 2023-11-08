@@ -2,23 +2,78 @@ create database magazu;
 
 use magazu;
 
+drop table produto;
 create table produto(
-cod_produto int not null auto_increment primary key,
+codproduto int not null auto_increment primary key,
 nome varChar(26) not null,
 descricao varchar(128),
 preco float not null
 );
 
+drop table cliente;
 create table cliente(
-cod_cliente int not null auto_increment primary key,
+codcliente int not null auto_increment primary key,
 nome varchar(30),
 telefone varchar(14),
 endereco varchar(40)
 );
 
+alter table cliente modify telefone varchar(30) not null;
+
+drop table fornecedor;
 create table fornecedor(
-cod_fornecedor int not null auto_increment primary key,
+codfornecedor int not null auto_increment primary key,
 razao_social varchar(40) not null,
 nome_fantasia varchar(40) not null
 );
 
+
+CREATE TABLE `pedido`(
+  `codpedido` int(11) NOT NULL primary key AUTO_INCREMENT,
+  `datapedido` date NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `valor` float NOT NULL,
+  `total` float NOT NULL,
+  `codcliente` int(11) NOT NULL,
+  `codproduto` int(11) NOT NULL
+);
+
+drop table pedido;
+alter table pedido add constraint
+fkproduto foreign key(codproduto)
+references produto(codproduto);
+
+alter table produto add(codfornecedor int not null);
+
+alter table produto add constraint
+fkfornecedor foreign key(codfornecedor )
+references fornecedor(codfornecedor );
+
+create table pedido();
+
+alter table pedido add constraint fk_produtos
+foreign key(codcliente) 
+references cliente(codcliente);
+
+alter table pedido add constraint fk_produtos2
+foreign key(codproduto) 
+references produto(codproduto);
+
+alter table produto add constraint fk_fornecedor
+foreign key(codfornecedor) references 
+fornecedor(codfornecedor)
+
+alter table pedido add constraint fk_produtos4
+foreign key(codproduto) 
+references produto(codproduto);
+
+alter table produto add constraint fk_fornecedor
+foreign key(codfornecedor) references 
+fornecedor(codfornecedor);
+
+
+select * from produto;
+
+insert into cliente(codcliente, nome,  telefone, endereco)
+values
+(null, 'Ana', 'Rua abc', '+552190000000');
