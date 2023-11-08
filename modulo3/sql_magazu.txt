@@ -20,7 +20,7 @@ references fornecedor(codfornecedor );
 
 drop table cliente;
 create table cliente(
-codcliente int not null auto_increment primary key,
+codcliente int auto_increment primary key,
 nome varchar(30),
 telefone varchar(14),
 endereco varchar(40)
@@ -32,7 +32,10 @@ drop table fornecedor;
 create table fornecedor(
 codfornecedor int not null auto_increment primary key,
 razao_social varchar(40) not null,
-nome_fantasia varchar(40) not null
+nome_fantasia varchar(40) not null,
+cnpj varchar(20),
+email varchar(30),
+endereco varchar(8)
 );
 
 drop table pedido;
@@ -50,8 +53,5 @@ alter table pedido add constraint
 fkproduto foreign key(codproduto)
 references produto(codproduto);
 
-
-
-insert into cliente(codcliente, nome,  telefone, endereco)
-values
+insert into cliente(codcliente, nome,  telefone, endereco) values
 (null, 'Ana', 'Rua abc', '+552190000000');
