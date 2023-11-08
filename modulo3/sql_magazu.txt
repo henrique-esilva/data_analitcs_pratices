@@ -2,6 +2,8 @@ create database magazu;
 
 use magazu;
 
+select * from produto;
+
 drop table produto;
 create table produto(
 codproduto int not null auto_increment primary key,
@@ -28,27 +30,26 @@ nome_fantasia varchar(40) not null
 );
 
 drop table pedido;
-CREATE TABLE `pedido`(
-  `codpedido` int(11) NOT NULL primary key AUTO_INCREMENT,
-  `datapedido` date NOT NULL,
-  `quantidade` int(11) NOT NULL,
-  `valor` float NOT NULL,
-  `total` float NOT NULL,
-  `codcliente` int(11) NOT NULL,
-  `codproduto` int(11) NOT NULL
+create table pedido(
+codpedido int(11) not null primary key auto_increment,
+datapedido date not null,
+quantidade int(11) not null,
+valor float not null,
+total float not null,
+codcliente int(11) not null,
+codproduto int(11) not null
 );
 
 alter table pedido add constraint
 fkproduto foreign key(codproduto)
 references produto(codproduto);
 
+
 alter table produto add(codfornecedor int not null);
 
 alter table produto add constraint
 fkfornecedor foreign key(codfornecedor )
 references fornecedor(codfornecedor );
-
-create table pedido();
 
 alter table pedido add constraint fk_produtos
 foreign key(codcliente) 
@@ -60,18 +61,15 @@ references produto(codproduto);
 
 alter table produto add constraint fk_fornecedor
 foreign key(codfornecedor) references 
-fornecedor(codfornecedor)
+fornecedor(codfornecedor);
 
 alter table pedido add constraint fk_produtos4
-foreign key(codproduto) 
+foreign key(codproduto)
 references produto(codproduto);
 
 alter table produto add constraint fk_fornecedor
-foreign key(codfornecedor) references 
+foreign key(codfornecedor) references
 fornecedor(codfornecedor);
-
-
-select * from produto;
 
 insert into cliente(codcliente, nome,  telefone, endereco)
 values
