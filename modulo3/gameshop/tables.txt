@@ -1,0 +1,19 @@
+create database gameshop;
+use gameshop;
+
+create table departamento(
+coddepartamento int auto_increment primary key,
+nome varchar(30),
+descricao varchar(128)
+);
+
+create table funcionario(
+codfuncionario int auto_increment primary key,
+nome varchar(40),
+cpf varchar(12),
+coddepartamento int not null
+);
+
+alter table funcionario add constraint
+fkdepartamento foreign key(coddepartamento)
+references departamento(coddepartamento);
