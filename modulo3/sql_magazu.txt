@@ -12,6 +12,12 @@ descricao varchar(128),
 preco float not null
 );
 
+alter table produto add(codfornecedor int not null);
+
+alter table produto add constraint
+fkfornecedor foreign key(codfornecedor )
+references fornecedor(codfornecedor );
+
 drop table cliente;
 create table cliente(
 codcliente int not null auto_increment primary key,
@@ -45,31 +51,6 @@ fkproduto foreign key(codproduto)
 references produto(codproduto);
 
 
-alter table produto add(codfornecedor int not null);
-
-alter table produto add constraint
-fkfornecedor foreign key(codfornecedor )
-references fornecedor(codfornecedor );
-
-alter table pedido add constraint fk_produtos
-foreign key(codcliente) 
-references cliente(codcliente);
-
-alter table pedido add constraint fk_produtos2
-foreign key(codproduto) 
-references produto(codproduto);
-
-alter table produto add constraint fk_fornecedor
-foreign key(codfornecedor) references 
-fornecedor(codfornecedor);
-
-alter table pedido add constraint fk_produtos4
-foreign key(codproduto)
-references produto(codproduto);
-
-alter table produto add constraint fk_fornecedor
-foreign key(codfornecedor) references
-fornecedor(codfornecedor);
 
 insert into cliente(codcliente, nome,  telefone, endereco)
 values
