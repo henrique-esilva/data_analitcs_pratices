@@ -20,9 +20,9 @@ cod_cliente int(4) not null primary key auto_increment,
 nome varchar(40) not null,
 cpf int(11) not null,
 rg int(9) not null,
-telefone varchar(17) not null,
-endereco varchar(40) not null,
-email varchar(25) not null
+telefone varchar(14) not null,
+endereco varchar(50) not null,
+email varchar(50) not null
 );
 
 select * from cliente;
