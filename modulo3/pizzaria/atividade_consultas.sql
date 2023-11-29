@@ -1,33 +1,31 @@
--- Atividade: Criar Consultas
+-- consultas no pizzaria
 
-select sum(preco) from tb_pedido;
-
+use pizzaria;
+-- seleciona todos os valores de todos os campos da tabela
+select * from tb_pedido;
+-- seleciona apenas o maior valor do campo `preco` da tabela
 select max(preco) from tb_pedido;
-select avg(preco) from tb_pizza;
-select categoria, avg(preco) from tb_pizza group by categoria;
-select categoria, avg(preco) from tb_pizza group by categoria having avg(preco);
-select tipo_entrega, sum(preco) from tb_pedido group by tipo_entrega;
-select nome, count(tb_pedido.id_pedido) from tb_pedido inner join tb_cliente group by nome order by count(id_pedido) asc;
+-- seleciona apenas o menor valor do campo `preco` da tabela
+select min(preco) from tb_pedido;
+-- seleciona a soma de todos os valores do campo `preco` da tabela tb_pedido
+select sum(preco) from tb_pedido;
+-- seleciona todos os valores do campo `preco` da tabela pedido em ordem crescente (ASCendente)
+select preco from tb_pedido order by preco asc;
+-- seleciona todos os valores do campo `preco` da tabela pedido em ordem decrescente (DESCendente)
+select preco from tb_pedido order by preco desc;
 
+-- documentar group by
 
+-- seleciona o somatório de todas as linhas de um campo filtrando por uma condicional
+select sum(preco) from tb_pedido where preco < 100;
 
-SELECT tb_cliente.nome, COUNT(tb_pedido.id_pedido) AS numero_pedidos
-FROM tb_cliente
-JOIN tb_pedido ON tb_cliente.id_cliente = tb_pedido.id_cliente
-GROUP BY tb_cliente.nome
-ORDER BY numero_pedidos;
+-- seleciona apenas o nome e preço da junção das tabelas tb_cliente e tb_pedido, apenas quando o nome iniciar com a letra m
+select nome, preco from tb_pedido inner join tb_cliente where nome like 'm%' order by nome asc;
 
--- seleciona o preco total dos pedidos agrupados pelo nome da pizza
-select tb_pizza.nome, sum(tb_pizza.preco) from tb_pedido inner join tb_pedido_pizza inner join tb_pizza on
-(tb_pedido.id_pedido = tb_pedido_pizza.id_pedido) and
-(tb_pizza.id_pizza = tb_pedido_pizza.id_pizza) group by tb_pizza.nome;
+-- inner join pode ser usado para fazer a junção de tabelas durante uma consulta, desde que todas estejam relacionadas
+select nome, preco
+from tb_cliente inner join tb_pedido
+on tb_cliente.id_cliente = tb_pedido.id_cliente where preco in(45, 95, 120) order by nome desc;
 
-SELECT id_pizza, sum(preco)
-FROM tb_pedido_pizza
-INNER JOIN tb_pedido
-ON tb_pedido_pizza.id_pedido = tb_pedido.id_pedido GROUP BY id_pizza;
-
--- filtrando apenas as pizzas ZERO LACTOSE
-select tb_pizza.nome, sum(tb_pizza.preco), categoria from tb_pedido inner join tb_pedido_pizza inner join tb_pizza where
-(tb_pedido.id_pedido = tb_pedido_pizza.id_pedido) and
-(tb_pizza.id_pizza = tb_pedido_pizza.id_pizza) group by tb_pizza.nome having categoria = "Zero Lactose";
+-- 
+select categoria, count(*) from tb_pizza group by categoria;
