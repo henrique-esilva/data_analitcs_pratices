@@ -27,3 +27,7 @@ data_insert timestamp);
 create definer='root'@'localhost' trigger escola2
 before insert on aluno_audit 
 for each row set new.data_insert = now()
+
+create definer='root'@'localhost' trigger aluno_log_func
+before insert on aluno_audit
+for each row set new.data_insert = now();
