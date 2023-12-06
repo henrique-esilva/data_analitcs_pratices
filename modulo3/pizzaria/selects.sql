@@ -26,5 +26,8 @@ select nome, preco
 from tb_cliente inner join tb_pedido
 on tb_cliente.id_cliente = tb_pedido.id_cliente where preco in(45, 95, 120) order by nome desc;
 
+select * from tb_cliente left join tb_pedido on tb_cliente.id_cliente=tb_pedido.id_cliente;
+select * from tb_pedido where preco in(90, 100, 320);
+
 -- 
 select categoria, count(*) from tb_pizza group by categoria;
