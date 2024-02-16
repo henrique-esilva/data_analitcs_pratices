@@ -1,0 +1,6 @@
+1. Foi feita uma análise e percebemos que as vendas do e-commerce aumentaram muito mais em relação às lojas físicas e precisamos de uma maneira de suprir a demanda, evitando o atraso de entregas e desabastecimento do estoque.
+2. Se as vendas continuarem aumentando neste ritmo não acompanharemos a demanda, ocorrerão atrasos, deixando clientes insatisfeitos, além do desabastecimento do estoque. Assim perderemos uma grande oportunidade de crescimento.
+3. Apresentação da pesquisa, identificação do problema, possíveis consequências, medidas possíveis
+4. Um gráfico de vendas x tempo, que mostra a tendência de crescimento observada e a expectativa para o futuro.
+5. ??
+6. ??
