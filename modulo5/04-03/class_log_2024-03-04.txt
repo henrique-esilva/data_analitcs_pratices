@@ -1,0 +1,20 @@
+04 março 2024
+Atividade 1
+
+tempo 30min
+inicio em 13:35
+final aos 14:05
+
+pag. 68 pack 1
+pag. 23
+usando o dataset de felicidade
+
+monte pelo menos mais dois gráficos de
+1. cluster
+2. linha de tendência
+3. previsão (forecast)
+
+Grupo
+Andressa
+Felipe Damico
+Pedro
