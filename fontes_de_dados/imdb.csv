@@ -1,0 +1,62 @@
+Title: Título do filme
+title_year: ano do filme
+budget: orçamento do filme em dólar
+Gross: rendimento bruto do filme em dólar
+actor_1_name: Nome do ator principal do filme
+actor_2_name: Nome do segundo ator coadjuvante
+actor_3_name: Nome do terceiro ator coadjuvante
+actor_1_facebook_likes: Curtidas no facebook do ator principal do filme
+actor_2_facebook_likes: Curtidas no facebook do segundo ator coadjuvante do filme
+actor_3_facebook_likes: Curtidas no facebook do terceiro ator coadjuvante do filme
+IMDb_rating: Notas do filme no IMDb
+genre_1: Gênero principal do filme
+genre_2: Gênero secundário do filme
+genre_3: Gênero terciário do filme
+MetaCritic: Avaliação média no Metacritic (website de críticas) em uma escala de 100
+Runtime: Duração do filme em minutos
+CVotes10: Número de pessoas que votaram 10/10 para o filme
+CVotes09: Número de pessoas que votaram 9/10 para o filme
+CVotes08: Número de pessoas que votaram 8/10 para o filme
+CVotes07: Número de pessoas que votaram 7/10 para o filme
+CVotes06: Número de pessoas que votaram 6/10 para o filme
+CVotes05: Número de pessoas que votaram 5/10 para o filme
+CVotes04: Número de pessoas que votaram 4/10 para o filme
+CVotes03: Número de pessoas que votaram 3/10 para o filme
+Cvotes02: Número de pessoas que votaram 2/10 para o filme
+CVotes01: Número de pessoas que votaram 1/10 para o filme
+CVotesMale: Número total de votos dos homens
+CVotesFemale: Número total de votos das mulheres
+CVotesU18: Número de votos do grupo com idade inferior a 18 anos
+CVotesU18M: Número de votos dos homens do grupo com idade inferior a 18 anos
+CVotesU18F: Número de votos das mulheres do grupo com idade inferior a 18 anos
+CVotes1829: Número de votos do grupo com idade entre 18 e 29 anos
+CVotes1829M: Número de votos dos homens do grupo com idade entre 18 e 29 anos
+CVotes1829F: Número de votos das mulheres do grupo com idade entre 18 e 29 anos
+CVotes3044: Números de votos do grupo com idade entre 30 a 44 anos
+CVotes3044M: Números de votos dos homens do grupo com idade entre 30 a 44 anos
+CVotes3044F: Números de votos das mulheres do grupo com idade entre 30 a 44 anos
+CVotes45A: Número de votos do grupo com idade superior a 45 anos
+CVotes45AM: Número de votos dos homens do grupo com idade superior a 45 anos
+CVotes45AF: Número de votos das mulheres do grupo com idade superior a 45 anos
+CVotes1000: Número de votos dos top 1000 votantes do IMDb
+CVotesUS: Número de votos de americanos
+CVotesnUS: Número de votos de não-americanos
+VotesM: Avaliação média dada por homens
+VotesF: Avaliação média dada por mulheres
+VotesU18: Avaliação média dada pelo grupo com idade inferior a 18 anos
+VotesU18M: Avaliação média dada pelos homens do grupo com idade inferior a 18 anos
+VotesU18F: Avaliação média dada pelas mulheres do grupo com idade inferior a 18 anos
+Votes1829: Avaliação média dada pelo grupo com idade entre 18 a 29 anos
+Votes1829M: Avaliação média dada pelos homens do grupo com idade entre 18 a 29 anos
+Votes1829F: Avaliação média dada pelas mulheres do grupo com idade entre 18 a 29 anos
+Votes3044: Avaliação média dada pelo grupo com idade entre 30 a 44 anos
+Votes3044M: Avaliação média dada pelos homens do grupo com idade entre 30 a 44 anos
+Votes3044F: Avaliação média dada pelas mulheres do grupo com idade entre 30 a 44 anos
+Votes45A: Avaliação média dada pelo grupo com idade superior a 45 anos
+Votes45AM: Avaliação média dada pelos homens do grupo com idade superior a 45 anos
+Votes45AF: Avaliação média dada pelas mulheres do grupo com idade superior a 45 anos
+Votes1000: Avaliação média dada pelos top 1000 votantes do IMDb
+VotesUS: Avaliação média dada pelos americanos
+VotesnUS: Avaliação média dada pelos não-americanos
+content_rating: Classificação do conteúdo do filme. Por exemplo: PG-13, classificação R, etc.
+Country: País de origem do filme
